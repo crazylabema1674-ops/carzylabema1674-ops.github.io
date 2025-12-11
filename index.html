@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crazy Lab. - 科学技術勉強会</title>
+    
+    <!-- Google Fonts: Noto Sans JP（上品な日本語フォント） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- CSSファイルの読み込み -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ========================================
+         ヘッダー（ナビゲーション）
+         ======================================== -->
+    <header class="header">
+        <div class="container">
+            <!-- ロゴ -->
+            <div class="logo">Crazy Lab.  "見ようとしないと始まらない"</div>
+            
+            <!-- ナビゲーションメニュー -->
+            <nav class="nav">
+                <a href="#about" class="nav-link">ABOUT</a>
+                <a href="#members" class="nav-link">MEMBERS</a>
+                <a href="#activities" class="nav-link">ACTIVITIES</a>
+                <a href="#contact" class="nav-link">CONTACT</a>
+            </nav>
+            
+            <!-- モバイル用ハンバーガーメニューボタン -->
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ========================================
+         HEROセクション（トップビジュアル）
+         ======================================== -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">ワクワクを学び深める勉強会</h1>
+            <p class="hero-subtitle">科学技術好きの4人で興味のままにワクワクを学ぶ取り組みを毎週進行中。</p>
+        </div>
+    </section>
+
+    <!-- ========================================
+         ABOUTセクション（勉強会とは？）
+         ======================================== -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="section-title">ABOUT</h2>
+            <div class="about-content">
+                <p class="about-text">
+                    Crazy Lab.は、科学技術に興味を持つ4人のメンバーが集まり、週に1回のペースで学び合う勉強会です。
+                    私たちは「わかるまで学ぶ」をモットーに、書籍や論文を活用しながら、それぞれの興味のあるテーマを深掘りしています。
+                </p>
+                <p class="about-text">
+                    詳しくない分野でも積極的にチャレンジし、お互いに知識を共有することで、新しい発見や学びを楽しんでいます。
+                    技術の進化とともに、私たちも成長し続けることを目指しています。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         MEMBERSセクション（メンバー紹介）
+         ======================================== -->
+    <section id="members" class="section members-section">
+        <div class="container">
+            <h2 class="section-title">MEMBERS</h2>
+            <div class="members-grid">
+                <!-- メンバーカード1 -->
+                <div class="member-card">
+                    <h3 class="member-name">Ema</h3>
+                    <p class="member-role">Webフロント担当</p>
+                    <p class="member-comment">CSSで遊ぶのが好き。デザインと実装の両方を楽しんでいます。</p>
+                </div>
+
+                <!-- メンバーカード2 -->
+                <div class="member-card">
+                    <h3 class="member-name">Ryo</h3>
+                    <p class="member-role">AIプロンプト研究担当</p>
+                    <p class="member-comment">とにかく試すタイプ。新しい技術に挑戦するのが大好きです。</p>
+                </div>
+
+                <!-- メンバーカード3 -->
+                <div class="member-card">
+                    <h3 class="member-name">Shun</h3>
+                    <p class="member-role">Python担当</p>
+                    <p class="member-comment">データ処理に興味あり。分析と可視化を探求中です。</p>
+                </div>
+
+                <!-- メンバーカード4 -->
+                <div class="member-card">
+                    <h3 class="member-name">You</h3>
+                    <p class="member-role">記録・進行担当</p>
+                    <p class="member-comment">勉強会を盛り上げる係。みんなの学びをサポートします。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         ACTIVITIESセクション（活動内容）
+         ======================================== -->
+    <section id="activities" class="section activities-section">
+        <div class="container">
+            <h2 class="section-title">ACTIVITIES</h2>
+            <div class="activities-grid">
+                <!-- 活動カード1 -->
+                <div class="activity-card">
+                    <h3 class="activity-title">AIで作る「自己紹介サイト」実践</h3>
+                    <p class="activity-description">
+                        生成AIを活用して、各メンバーの自己紹介サイトを制作。プロンプトの工夫を学びました。
+                    </p>
+                </div>
+
+                <!-- 活動カード2 -->
+                <div class="activity-card">
+                    <h3 class="activity-title">HTML/CSSの基礎習得</h3>
+                    <p class="activity-description">
+                        Webの基本構造とスタイリングを学習。レスポンシブデザインにも挑戦しました。
+                    </p>
+                </div>
+
+                <!-- 活動カード3 -->
+                <div class="activity-card">
+                    <h3 class="activity-title">JavaScriptで簡単なカウンター作成</h3>
+                    <p class="activity-description">
+                        インタラクティブな要素を追加するため、JavaScriptの基礎を実践的に学びました。
+                    </p>
+                </div>
+
+                <!-- 活動カード4 -->
+                <div class="activity-card">
+                    <h3 class="activity-title">ミニアプリ企画</h3>
+                    <p class="activity-description">
+                        学んだ技術を活かして、実用的なミニアプリケーションの企画・開発を進めています。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CONTACTセクション（お問い合わせ）
+         ======================================== -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">CONTACT</h2>
+            <div class="contact-content">
+                <p class="contact-text">
+                    勉強会に興味がある方、質問がある方はお気軽にご連絡ください。
+                </p>
+                
+                <!-- フェイクフォーム（実際の送信機能はなし） -->
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">お名前</label>
+                        <input type="text" id="name" name="name" placeholder="山田太郎" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">メールアドレス</label>
+                        <input type="email" id="email" name="email" placeholder="example@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">メッセージ</label>
+                        <textarea id="message" name="message" rows="5" placeholder="ご質問やご意見をお聞かせください" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">送信する</button>
+                </form>
+                
+                <!-- SNSリンク -->
+                <div class="social-links">
+                    <p>または、SNSでフォローしてください：</p>
+                    <a href="https://twitter.com/" target="_blank" class="social-link">X (Twitter)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         フッター
+         ======================================== -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Crazy Lab. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScriptファイルの読み込み -->
+    <script src="script.js"></script>
+</body>
+</html>
