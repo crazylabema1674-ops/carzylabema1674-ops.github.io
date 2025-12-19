@@ -565,3 +565,190 @@ html {
         padding: 20px;
     }
 }
+
+/* ========================================
+   コラムページ用スタイル
+   ======================================== */
+
+/* サブページ用の小さなHEROエリア */
+.hero-small {
+    padding: 80px 24px 60px;
+    min-height: auto;
+}
+.hero-small .hero-title {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+}
+
+/* コラム一覧グリッド */
+.columns-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+/* 記事カード */
+.column-card {
+    background-color: var(--bg-white);
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.column-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--border-color);
+}
+
+.column-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 16px;
+}
+
+.column-author {
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.column-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    color: var(--primary-color);
+}
+
+.column-excerpt {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    margin-bottom: 24px;
+    flex-grow: 1; /* ボタンを下に押しやる */
+}
+
+.read-more {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-align: right;
+}
+
+/* ========================================
+   記事詳細ページ用スタイル
+   ======================================== */
+.article-section {
+    padding: 60px 24px 100px;
+    background-color: var(--bg-white);
+}
+
+.article-container {
+    max-width: 800px; /* 読みやすい幅に制限 */
+    margin: 0 auto;
+}
+
+.article-header {
+    margin-bottom: 48px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 32px;
+}
+
+.article-header .article-meta {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 16px;
+    color: var(--text-gray);
+}
+
+.article-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    line-height: 1.4;
+}
+
+/* 記事本文のスタイル（Typography） */
+.article-content {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--text-dark);
+}
+
+.article-content h2 {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin: 48px 0 24px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--bg-gradient-start);
+}
+
+.article-content h3 {
+    font-size: 1.3rem;
+    color: var(--primary-light);
+    margin: 32px 0 16px;
+}
+
+.article-content p {
+    margin-bottom: 24px;
+}
+
+.article-content blockquote {
+    background-color: var(--bg-light);
+    border-left: 4px solid var(--accent-color);
+    padding: 24px;
+    margin: 32px 0;
+    font-style: italic;
+    color: var(--text-gray);
+}
+
+.article-content img {
+    max-width: 1000px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 24px 0;
+    box-shadow: var(--shadow);
+}
+
+/* 戻るボタンエリア */
+.article-footer {
+    margin-top: 64px;
+    text-align: center;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 12px 32px;
+    border: 2px solid var(--border-color);
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--text-gray);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: var(--bg-light);
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .article-title {
+        font-size: 1.6rem;
+    }
+    
+    .article-content {
+        font-size: 1rem;
+    }
+}
