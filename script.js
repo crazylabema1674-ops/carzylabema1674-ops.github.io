@@ -60,27 +60,43 @@ fadeInElements.forEach(element => {
 });
 
 // ========================================
-// スムーススクロール（古いブラウザ対応）
+// スムーススクロール（リンク判定の強化版）
 // ========================================
 
-// すべてのナビゲーションリンクに対してスムーススクロールを適用
+// すべてのナビゲーションリンクに対して処理を設定
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-        // デフォルトのリンク動作を無効化
-        e.preventDefault();
+        // リンク先のパスを取得
+        const href = link.getAttribute('href');
         
-        // リンク先のIDを取得
-        const targetId = link.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
+        // 1. リンクに「#」が含まれていない場合（例: columns.html）
+        //    → 別のページへの移動なので、JSは何もしない（ブラウザに任せる）
+        if (href.indexOf('#') === -1) {
+            return;
+        }
+
+        // 2. リンク先が現在のページ内に存在するか確認
+        //    （例: index.html#about の #about 部分だけを取り出す）
+        const hash = href.substring(href.indexOf('#'));
+        const targetSection = document.querySelector(hash);
         
-        // 対象セクションが存在する場合
+        // ターゲットが同じページ内に見つかった場合のみ、スクロールを実行
         if (targetSection) {
+            // デフォルトのページ移動を無効化
+            e.preventDefault();
+            
             // スムーススクロールで移動
             targetSection.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
+
+            // モバイルメニューが開いていたら閉じる
+            hamburger.classList.remove('active');
+            nav.classList.remove('active');
         }
+        // 見つからない場合（例: columns.htmlからindex.html#aboutへのリンク）は
+        // e.preventDefault() しないので、そのままページ遷移する
     });
 });
 
